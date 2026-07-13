@@ -8,12 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.tokens.css">
 <style>
   :root{
-    --forest:#14401A; --green:#1B5E20; --green2:#2E7D32; --teal:#26A69A; --leaf:#43A047; --leaf2:#69F0AE;
-    --mint:#EAF7EE; --mint2:#F5FBF5; --gold:#F4B400; --gold2:#FFD658; --ink:#1c2b1b; --muted:#5c7565;
-    --line:#dfeae2; --radius:20px;
-    --depth:linear-gradient(140deg,#14401A 0%,#1B5E20 34%,#2E7D32 66%,#26A69A 100%);
+    /* Colori/gradiente dalla FONTE UNICA del brand (brand.tokens.css): si cambiano lì e tutte le pagine si riallineano.
+       Il 2° valore in var() è un fallback (stessi hex) se il file token non fosse raggiungibile → pagina sempre a colori. */
+    --forest:var(--tr-color-forest-900,#14401A); --green:var(--tr-color-forest-800,#1B5E20); --green2:var(--tr-color-forest-700,#2E7D32);
+    --teal:var(--tr-color-teal-500,#26A69A); --leaf:var(--tr-color-forest-500,#43A047); --leaf2:var(--tr-color-mintGlow,#69F0AE);
+    --mint:var(--tr-color-surface-mint50,#EAF7EE); --mint2:var(--tr-color-surface-app,#F5F8F5); --gold:var(--tr-color-gold-700,#FFB300); --gold2:var(--tr-color-gold-300,#FFE082);
+    --ink:var(--tr-color-ink-body,#37474F); --muted:var(--tr-color-ink-muted,#5A6B5C);
+    --line:var(--tr-color-surface-border,#E6ECE6); --radius:20px;
+    --depth:var(--tr-gradient-depth,linear-gradient(135deg,#14401A 0%,#1B5E20 34%,#2E7D32 68%,#26A69A 100%));
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth;overflow-x:clip}
