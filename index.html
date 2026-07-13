@@ -16,9 +16,9 @@
     --depth:linear-gradient(140deg,#14401A 0%,#1B5E20 34%,#2E7D32 66%,#26A69A 100%);
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth;overflow-x:hidden}
+  html{scroll-behavior:smooth;overflow-x:clip}
   body{margin:0;font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--mint2);
-    line-height:1.5;overflow-x:hidden;position:relative}
+    line-height:1.5;overflow-x:clip;position:relative}
   h1,h2,h3,.fred{font-family:'Fredoka','Nunito',sans-serif;line-height:1.08}
   .cav{font-family:'Caveat',cursive}
   a{color:inherit;text-decoration:none}
@@ -72,7 +72,7 @@
   @media(max-width:860px){.mascot{width:120px;right:calc(50% - 190px)}}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
   /* foglia che scende in LOOP fino a fine pagina (fade in/out per un reset morbido) */
-  .fall-leaf{position:absolute;left:0;top:-6%;font-size:30px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.25));animation:pagefall 15s linear infinite;will-change:transform,top}
+  .fall-leaf{position:absolute;left:0;top:-6%;font-size:30px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.25));animation:pagefall 34s linear infinite;will-change:transform,top}
   @keyframes pagefall{0%{top:-6%;opacity:0;transform:translateX(8vw) rotate(0)}6%{opacity:.85}25%{transform:translateX(42vw) rotate(150deg)}50%{transform:translateX(14vw) rotate(250deg)}75%{transform:translateX(54vw) rotate(360deg)}94%{opacity:.85}100%{top:104%;opacity:0;transform:translateX(26vw) rotate(500deg)}}
   @media(prefers-reduced-motion:reduce){.fall-leaf{display:none}}
 
@@ -133,8 +133,10 @@
   footer{background:#0f2c16;color:#cfe6d4;padding:44px 0}
   footer .wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
   footer img{height:26px}
-  footer .soc{margin-left:auto;display:flex;gap:14px}
-  footer .soc a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700}
+  footer .foot-cta{margin-left:auto;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+  footer .foot-soc{display:flex;gap:10px;flex-wrap:wrap}
+  footer .btn{padding:11px 18px;font-size:14px}
+  @media(max-width:640px){footer .foot-cta{margin-left:0;width:100%;align-items:stretch}}
   footer .fine{width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:16px;font-size:13px;color:#9fc0a8}
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
@@ -162,7 +164,7 @@
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="wrap">
     <div>
-      <span class="badge"><span class="dot"></span> Gratis su Google Play</span>
+      <span class="badge"><span class="dot"></span> Disponibile su Google Play</span>
       <h1>Ti ricordo io <span class="u">cosa</span> buttare.<br>E <span class="u">quando</span>.</h1>
       <p class="lead">Imposti i giorni di raccolta di casa tua e l'ora del promemoria. Al resto ci penso io — ogni giorno ti dico cosa portare fuori. <b>Offline, senza account, in 5 lingue.</b></p>
       <div class="cta">
@@ -280,9 +282,12 @@
 <footer>
   <div class="wrap">
     <img src="trashino-wordmark-dark.png" alt="Trashino">
-    <div class="soc">
-      <a href="https://instagram.com/trashino.eco" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-      <a href="https://facebook.com/trashino.eco" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <div class="foot-cta">
+      <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener">▸ Scarica su Google Play</a>
+      <div class="foot-soc">
+        <a class="btn btn-ghost" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" href="https://facebook.com/trashino.eco" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
     <div class="fine">© 2026 Trashino · l'amico della raccolta differenziata · <a href="https://airally-digital.github.io/trashino-privacy/" target="_blank" rel="noopener" style="color:#bfe0c6;text-decoration:underline">Privacy</a><br>Powered by <b style="color:#e7f6ec">Airally Digital</b> <span style="opacity:.55">· v1.0</span></div>
   </div>
