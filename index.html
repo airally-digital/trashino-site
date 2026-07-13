@@ -57,8 +57,9 @@
   .hero h1 .u{color:var(--gold2)}
   .hero p.lead{font-size:clamp(17px,2.2vw,21px);color:#e7f6ec;max-width:540px;margin:0 auto 26px}
   @media(min-width:861px){.hero p.lead{margin-left:0}}
-  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-  @media(max-width:860px){.hero .cta{justify-content:center}}
+  .hero .cta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+  .hero .socials{display:flex;gap:12px;flex-wrap:wrap}
+  @media(max-width:860px){.hero .cta{align-items:center}}
   .hero .note{margin-top:16px;font-size:13px;color:#bfe7c8}
   /* phone + mascot */
   .stage{position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:440px}
@@ -68,8 +69,9 @@
   .mascot{position:absolute;right:-6px;bottom:-8px;width:150px;z-index:3;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 18px rgba(6,26,12,.4))}
   @media(max-width:860px){.mascot{width:120px;right:calc(50% - 190px)}}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
-  .leaf{position:absolute;color:var(--leaf2);opacity:0;animation:drift linear infinite;will-change:transform,opacity}
-  @keyframes drift{0%{transform:translateY(-40px) rotate(-8deg);opacity:0}12%{opacity:.8}88%{opacity:.8}100%{transform:translateY(150px) rotate(46deg);opacity:0}}
+  /* foglia che scende con lo scroll, fino in fondo alla pagina (no loop) */
+  .fall-leaf{position:fixed;left:0;top:0;font-size:34px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.28));will-change:transform}
+  @media(prefers-reduced-motion:reduce){.fall-leaf{display:none}}
 
   /* SECTIONS */
   section{padding:84px 0}
@@ -137,6 +139,7 @@
 </style>
 </head>
 <body>
+<div class="fall-leaf" aria-hidden="true">🍃</div>
 
 <nav>
   <div class="wrap">
@@ -153,9 +156,6 @@
 <!-- HERO -->
 <header class="hero">
   <div class="glow g1"></div><div class="glow g2"></div>
-  <span class="leaf" style="left:9%;top:14%;font-size:26px;animation-duration:12s;animation-delay:0s">🍃</span>
-  <span class="leaf" style="left:47%;top:8%;font-size:18px;animation-duration:15s;animation-delay:-5s">🍃</span>
-  <span class="leaf" style="right:30%;top:20%;font-size:22px;animation-duration:13s;animation-delay:-9s">🍃</span>
   <div class="wrap">
     <div>
       <span class="badge"><span class="dot"></span> Gratis su Google Play</span>
@@ -163,9 +163,12 @@
       <p class="lead">Imposti i giorni di raccolta di casa tua e l'ora del promemoria. Al resto ci penso io — ogni giorno ti dico cosa portare fuori. <b>Offline, senza account, in 5 lingue.</b></p>
       <div class="cta">
         <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener">▸ Scarica su Google Play</a>
-        <a class="btn btn-ghost" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Seguici · @trashino.eco</a>
+        <div class="socials">
+          <a class="btn btn-ghost" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-ghost" href="https://facebook.com/trashino.eco" target="_blank" rel="noopener">Facebook</a>
+        </div>
       </div>
-      <p class="note">Gratis. Nessuna registrazione. Semplice e leggera.</p>
+      <p class="note">Nessuna registrazione. Semplice e leggera.</p>
     </div>
     <div class="stage">
       <div class="phone"><span class="notch"></span><img src="app-home.png" alt="La schermata iniziale di Trashino"></div>
@@ -207,7 +210,7 @@
 <!-- COME FUNZIONA -->
 <section id="come">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">Come funziona</span><h2>Lo imposti una volta, poi ci penso io</h2><p>Tre passi e non ci pensi più.</p></div>
+    <div class="sec-head reveal"><span class="eyebrow">Come funziona</span><h2>Lo imposti una volta, poi ci penso io</h2><p>Tre semplici passi e non dimentichi più un ritiro.</p></div>
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h3>Imposti i giorni</h3><p>Segni i giorni di raccolta di casa tua: organico, plastica, carta, vetro…</p></div>
       <div class="step reveal" style="transition-delay:.08s"><div class="n">2</div><h3>Scegli l'ora</h3><p>Decidi tu a che ora ricevere il promemoria di cosa buttare oggi.</p></div>
@@ -222,7 +225,7 @@
     <div class="sec-head reveal"><span class="eyebrow">Cosa fa</span><h2>Tutto quello che ti serve, niente di più</h2></div>
     <div class="feats">
       <div class="feat reveal"><div class="ic">🔔</div><h3>Promemoria puntuali</h3><p>Notifiche all'ora che scegli tu.</p></div>
-      <div class="feat reveal"><div class="ic">📅</div><h3>Calendario chiaro</h3><p>Tutta la tua raccolta a colpo d'occhio. E se vuoi, ti dice quando esce la prossima carta (o qualsiasi categoria).</p></div>
+      <div class="feat reveal"><div class="ic">📅</div><h3>Calendario chiaro</h3><p>Tutta la tua raccolta a colpo d'occhio. E puoi visualizzare quando esce la prossima carta (o qualsiasi categoria).</p></div>
       <div class="feat reveal"><div class="ic">📴</div><h3>Funziona offline</h3><p>Nessuna connessione necessaria: sempre con te.</p></div>
       <div class="feat reveal"><div class="ic">🙅</div><h3>Senza account</h3><p>Niente registrazione, niente email. Apri e usi.</p></div>
       <div class="feat reveal"><div class="ic">🌍</div><h3>In 5 lingue</h3><p>Italiano, inglese, francese, tedesco, spagnolo.</p></div>
@@ -261,7 +264,7 @@
 <section id="scarica" class="cta-band">
   <div class="wrap reveal">
     <h2>Scaricala sul tuo telefono 🌱</h2>
-    <p>Trashino è gratis su Google Play. Seguici per restare aggiornato.</p>
+    <p>Trashino è su Google Play. Seguici per restare aggiornato.</p>
     <div class="row">
       <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener">▸ Scarica su Google Play</a>
       <a class="btn btn-light" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
@@ -284,6 +287,17 @@
 <script>
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // foglia che scende seguendo lo scroll, fino in fondo alla pagina (non torna su)
+  const fl=document.querySelector('.fall-leaf');
+  function fall(){
+    const max=document.documentElement.scrollHeight-innerHeight;
+    const p=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
+    const y=p*(innerHeight-72)+14;
+    const cx=innerWidth*0.5, amp=Math.min(cx-46,200);
+    const x=cx-17+Math.sin(p*Math.PI*5)*amp;
+    fl.style.transform='translate('+x+'px,'+y+'px) rotate('+(p*900)+'deg)';
+  }
+  addEventListener('scroll',fall,{passive:true}); addEventListener('resize',fall); fall();
 </script>
 </body>
 </html>
