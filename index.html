@@ -17,7 +17,11 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trashino — Ti ricordo io cosa buttare, e quando">
+<meta name="twitter:description" content="Imposta i giorni di raccolta e l'ora: ti ricordo io cosa portare fuori. Offline, senza account, in 5 lingue.">
 <meta name="twitter:image" content="https://trashino.com/og-image.jpg">
+<link rel="canonical" href="https://trashino.com/">
+<meta name="theme-color" content="#1B5E20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -42,19 +46,19 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
   .btn{display:inline-flex;align-items:center;gap:9px;border:none;border-radius:999px;padding:14px 24px;
-    font-weight:700;font-family:'Fredoka';font-size:16px;cursor:pointer;transition:transform .12s ease,box-shadow .2s ease;white-space:nowrap}
+    font-weight:700;font-family:'Fredoka','Nunito',sans-serif;font-size:16px;cursor:pointer;transition:transform .12s ease,box-shadow .2s ease;white-space:nowrap}
   .btn:hover{transform:translateY(-2px)}
   .btn-gold{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#3a2c00;box-shadow:0 8px 24px rgba(244,180,0,.35)}
   .btn-light{background:#fff;color:var(--green)}
   .btn-ghost{background:rgba(255,255,255,.10);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
   .btn-green{background:var(--green);color:#fff;box-shadow:0 8px 24px rgba(20,64,26,.25)}
-  .eyebrow{font-family:'Fredoka';font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--leaf)}
+  .eyebrow{font-family:'Fredoka','Nunito',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--green2)}
 
   /* NAV */
   nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);background:rgba(245,251,244,.82);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;gap:14px;height:64px}
   nav img{height:26px}
-  nav .links{margin-left:auto;display:flex;gap:22px;align-items:center;font-family:'Fredoka';font-weight:500;font-size:15px;color:var(--green)}
+  nav .links{margin-left:auto;display:flex;gap:22px;align-items:center;font-family:'Fredoka','Nunito',sans-serif;font-weight:500;font-size:15px;color:var(--green)}
   nav .links a{opacity:.85;position:relative} nav .links a:hover{opacity:1;color:var(--green2)}
   nav .links a.active{opacity:1;color:var(--green)}
   nav .links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2.5px;border-radius:2px;background:var(--leaf)}
@@ -63,9 +67,9 @@
   /* language switcher */
   .langsel{position:relative;display:flex;align-items:center}
   .lang-trigger{display:none;align-items:center;gap:4px;background:#fff;border:1.5px solid var(--line);border-radius:999px;
-    padding:5px 10px;font-size:17px;line-height:1;cursor:pointer;color:var(--green)}
+    padding:8px 12px;font-size:17px;line-height:1;cursor:pointer;color:var(--green)}
   .lang-menu{display:flex;gap:2px}
-  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:6px 7px;border-radius:9px;opacity:.45;filter:grayscale(.5);transition:.15s}
+  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:9px 11px;border-radius:9px;opacity:.45;filter:grayscale(.5);transition:.15s}
   .lang-btn:hover{opacity:1;filter:none}
   .lang-btn.on{opacity:1;filter:none;background:rgba(27,94,32,.10)}
   @media(max-width:600px){
@@ -86,7 +90,7 @@
   .hero .wrap>*{min-width:0}
   @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;text-align:center;padding:52px 22px 70px}}
   .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);
-    padding:7px 14px;border-radius:999px;font-family:'Fredoka';font-weight:600;font-size:13.5px}
+    padding:7px 14px;border-radius:999px;font-family:'Fredoka','Nunito',sans-serif;font-weight:600;font-size:13.5px}
   .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--leaf2);box-shadow:0 0 0 0 rgba(105,240,174,.7);animation:pulse 2.2s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(105,240,174,.6)}70%{box-shadow:0 0 0 10px rgba(105,240,174,0)}100%{box-shadow:0 0 0 0 rgba(105,240,174,0)}}
   .hero h1{font-size:clamp(28px,6vw,68px);font-weight:600;margin:20px 0 14px;letter-spacing:-.5px;overflow-wrap:anywhere;text-wrap:balance}
@@ -102,7 +106,8 @@
   .phone img{width:100%;border-radius:26px;display:block}
   .phone .notch{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:52px;height:6px;border-radius:6px;background:#0a2311;z-index:3}
   .mascot{position:absolute;right:-6px;bottom:-8px;width:150px;z-index:3;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 18px rgba(6,26,12,.4))}
-  @media(max-width:860px){.mascot{width:120px;right:calc(50% - 190px)}}
+  @media(max-width:860px){.mascot{width:120px;right:max(6px,calc(50% - 190px))}}
+  @media(max-width:520px){.mascot{width:104px}}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
   .fall-leaf{position:absolute;left:0;top:0;font-size:30px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.25));animation:pagefall 34s linear infinite;will-change:transform,top}
   @keyframes pagefall{0%{top:0;opacity:0;transform:translateX(8vw) rotate(0)}6%{opacity:.8}25%{transform:translateX(42vw) rotate(150deg)}50%{transform:translateX(14vw) rotate(250deg)}75%{transform:translateX(52vw) rotate(360deg)}92%{opacity:.8}100%{top:92%;opacity:0;transform:translateX(26vw) rotate(500deg)}}
@@ -121,7 +126,7 @@
   @media(max-width:820px){.steps{grid-template-columns:1fr}}
   .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:0 10px 30px rgba(20,64,26,.05)}
   .step .n{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#3a2c00;
-    font-family:'Fredoka';font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    font-family:'Fredoka','Nunito',sans-serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
   .step h3{margin:0 0 8px;font-size:21px;color:var(--green)}
   .step p{margin:0;color:var(--muted)}
   .feat-sec{background:var(--mint)}
@@ -136,7 +141,7 @@
   @media(max-width:720px){.plans{grid-template-columns:1fr}}
   .plan{border-radius:var(--radius);padding:30px 26px;border:1.5px solid var(--line);background:#fff}
   .plan.pro{background:var(--depth);color:#fff;border:none;position:relative;overflow:hidden}
-  .plan .tag{font-family:'Fredoka';font-weight:700;font-size:14px;letter-spacing:.05em}
+  .plan .tag{font-family:'Fredoka','Nunito',sans-serif;font-weight:700;font-size:14px;letter-spacing:.05em}
   .plan.free .tag{color:var(--green2)} .plan.pro .tag{color:var(--gold2)}
   .plan h3{font-size:26px;margin:6px 0 14px}
   .plan.free h3{color:var(--green)}
@@ -153,20 +158,23 @@
   footer .wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
   footer img{height:26px}
   footer .soc{margin-left:auto;display:flex;gap:12px}
-  footer .soc a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe6d4;font-family:'Fredoka';font-weight:700;font-size:20px}
+  footer .soc a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe6d4;font-family:'Fredoka','Nunito',sans-serif;font-weight:700;font-size:20px}
   footer .soc a:hover{background:rgba(255,255,255,.16)}
   footer .fine{width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:16px;font-size:13px;color:#9fc0a8}
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){*{animation:none!important} .reveal{opacity:1;transform:none;transition:none}}
+  .btn:focus-visible,.lang-btn:focus-visible,nav a:focus-visible,.socials a:focus-visible,.cta-socials a:focus-visible,footer .soc a:focus-visible{outline:2.5px solid var(--leaf2);outline-offset:2px;border-radius:10px}
 </style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://trashino.com/#org","name":"Airally Digital","url":"https://trashino.com/","logo":"https://trashino.com/trashino-wordmark.png","sameAs":["https://instagram.com/trashino.eco","https://facebook.com/trashino.eco"]},{"@type":"WebSite","@id":"https://trashino.com/#website","url":"https://trashino.com/","name":"Trashino","inLanguage":"en","publisher":{"@id":"https://trashino.com/#org"}},{"@type":"MobileApplication","name":"Trashino","operatingSystem":"Android","applicationCategory":"LifestyleApplication","url":"https://trashino.com/","installUrl":"https://play.google.com/store/apps/details?id=com.trashino.app","publisher":{"@id":"https://trashino.com/#org"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}]}</script>
 </head>
 <body>
 <div class="fall-leaf" aria-hidden="true">🍃</div>
 
-<nav>
+<nav aria-label="Primary">
   <div class="wrap">
-    <img src="trashino-wordmark.png" alt="Trashino">
+    <a href="/" aria-label="Trashino — home"><img src="trashino-wordmark.png" alt="Trashino"></a>
     <div class="links">
       <a href="#cosa" data-i18n="nav.cosa">What it is</a>
       <a href="#come" data-i18n="nav.come">How it works</a>
@@ -175,7 +183,7 @@
     </div>
     <div class="langsel" id="langsel">
       <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">🇬🇧 ▾</button>
-      <div class="lang-menu">
+      <div class="lang-menu" role="group" aria-label="Language">
         <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
         <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
         <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
@@ -192,7 +200,7 @@
     <div>
       <span class="badge"><span class="dot"></span> <span data-i18n="hero.badge">Available on Google Play</span></span>
       <h1 data-i18n-html="hero.h1">I'll remember <span class="u">what</span> to put out.<br>And <span class="u">when</span>.</h1>
-      <p class="lead" data-i18n-html="hero.lead">Set your home's collection days and when you want the nudge. I'll handle the rest — every day I tell you what to put out. <b>Offline, no account, in 5 languages.</b></p>
+      <p class="lead" data-i18n-html="hero.lead">Set your home's collection days and when you want the nudge. I'll handle the rest — I tell you what to put out, right on time. <b>Offline, no account, in 5 languages.</b></p>
       <div class="cta">
         <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener" data-i18n="cta.download">▸ Get it on Google Play</a>
         <div class="socials">
@@ -203,7 +211,7 @@
       <p class="note" data-i18n="hero.note">No sign-up. Simple and light.</p>
     </div>
     <div class="stage">
-      <div class="phone"><span class="notch"></span><img src="app-home.png" alt="Trashino's home screen" data-i18n-alt="hero.appAlt"></div>
+      <div class="phone"><span class="notch"></span><img src="app-home.jpg" alt="Trashino's home screen" data-i18n-alt="hero.appAlt" width="270" height="480" fetchpriority="high"></div>
       <svg class="mascot" viewBox="206 76 268 294" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <ellipse cx="340" cy="358" rx="74" ry="9" fill="#000" fill-opacity="0.08"/>
         <path d="M285 210 Q238 224 230 194" fill="none" stroke="#368039" stroke-width="14" stroke-linecap="round"/>
@@ -244,7 +252,7 @@
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h3 data-i18n="step1.title">Set your days</h3><p data-i18n="step1.p">Mark your home's collection days: food waste, plastic, paper, glass…</p></div>
       <div class="step reveal" style="transition-delay:.08s"><div class="n">2</div><h3 data-i18n="step2.title">Pick your time</h3><p data-i18n="step2.p">You decide when to get the reminder of what to put out today.</p></div>
-      <div class="step reveal" style="transition-delay:.16s"><div class="n">3</div><h3 data-i18n="step3.title">I remind you what to put out</h3><p data-i18n="step3.p">Every day I let you know what to put out. Simple, on time, no worries.</p></div>
+      <div class="step reveal" style="transition-delay:.16s"><div class="n">3</div><h3 data-i18n="step3.title">I remind you what to put out</h3><p data-i18n="step3.p">On collection day I let you know what to put out. Simple, on time, no worries.</p></div>
     </div>
   </div>
 </section>
@@ -265,7 +273,7 @@
 
 <section id="piani">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow" data-i18n="plans.eyebrow">Free &amp; Premium</span><h2 data-i18n="plans.h2">Free does it all. Premium does more.</h2></div>
+    <div class="sec-head reveal"><span class="eyebrow" data-i18n="plans.eyebrow">Free &amp; Premium</span><h2 data-i18n="plans.h2">Free already does it all. Premium does more.</h2></div>
     <div class="plans">
       <div class="plan free reveal">
         <div class="tag" data-i18n="plan.free.tag">FREE</div><h3 data-i18n="plan.free.title">All the essentials</h3>
@@ -277,9 +285,9 @@
         </ul>
       </div>
       <div class="plan pro reveal" style="transition-delay:.08s">
-        <div class="tag" data-i18n="plan.pro.tag">★ PREMIUM</div><h3 data-i18n="plan.pro.title">Even more yours</h3>
+        <div class="tag" data-i18n="plan.pro.tag">★ PREMIUM</div><h3 data-i18n="plan.pro.title">Made even more yours</h3>
         <ul>
-          <li data-i18n="plan.pro.li1">Manage several places (home, seaside, office…)</li>
+          <li data-i18n="plan.pro.li1">Manage several places (home, holiday place, office…)</li>
           <li data-i18n="plan.pro.li2">A dedicated icon for each place</li>
           <li data-i18n="plan.pro.li3">Support an independent project 🌱</li>
         </ul>
@@ -304,12 +312,12 @@
 
 <footer>
   <div class="wrap">
-    <img src="trashino-wordmark-dark.png" alt="Trashino">
+    <img src="wordmark-on-dark.png" alt="Trashino" loading="lazy" decoding="async">
     <div class="soc">
       <a href="https://instagram.com/trashino.eco" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cfe6d4" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#cfe6d4" stroke="none"/></svg></a>
       <a href="https://facebook.com/trashino.eco" target="_blank" rel="noopener" aria-label="Facebook">f</a>
     </div>
-    <div class="fine">© 2026 Trashino · <span data-i18n="footer.tagline">your recycling buddy</span> · <a href="privacy/" style="color:#bfe0c6;text-decoration:underline" data-i18n="footer.privacy">Privacy</a><br><span data-i18n="footer.poweredby">Powered by</span> <b style="color:#e7f6ec">Airally Digital</b> <span style="opacity:.55">· v1.0</span></div>
+    <div class="fine">© 2026 Trashino · <span data-i18n="footer.tagline">your recycling buddy</span> · <a href="privacy/" style="color:#bfe0c6;text-decoration:underline" data-i18n="footer.privacy">Privacy</a><br><span data-i18n="footer.poweredby">Powered by</span> <b style="color:#e7f6ec">Airally Digital</b></div>
   </div>
 </footer>
 
@@ -328,14 +336,14 @@
     en:{ 'meta.title':`I'll remind you what to put out, and when`, 'meta.description':`Trashino is your recycling reminder: set your local collection days and a time, and it tells you what to put out. Offline, no account, in 5 languages.`,
       'nav.cosa':`What it is`,'nav.come':`How it works`,'nav.piani':`Free & Premium`,'hero.badge':`Available on Google Play`,
       'hero.h1':`I'll remember <span class="u">what</span> to put out.<br>And <span class="u">when</span>.`,
-      'hero.lead':`Set your home's collection days and when you want the nudge. I'll handle the rest — every day I tell you what to put out. <b>Offline, no account, in 5 languages.</b>`,
+      'hero.lead':`Set your home's collection days and when you want the nudge. I'll handle the rest — I tell you what to put out, right on time. <b>Offline, no account, in 5 languages.</b>`,
       'cta.download':`▸ Get it on Google Play`,'hero.note':`No sign-up. Simple and light.`,'hero.appAlt':`Trashino's home screen`,
       'quote.h2':`“What goes out today?”<br><span class="cav">— I'll remind you.</span>`,
       'quote.p':`Trashino is the <b>friend</b> who reminds you <b>what to put out today</b>, based on your collection calendar.`,
       'come.eyebrow':`How it works`,'come.h2':`Set me up once, then leave it to me`,'come.p':`Three easy steps and you'll never miss a collection again.`,
       'step1.title':`Set your days`,'step1.p':`Mark your home's collection days: food waste, plastic, paper, glass…`,
       'step2.title':`Pick your time`,'step2.p':`You decide when to get the reminder of what to put out today.`,
-      'step3.title':`I remind you what to put out`,'step3.p':`Every day I let you know what to put out. Simple, on time, no worries.`,
+      'step3.title':`I remind you what to put out`,'step3.p':`On collection day I let you know what to put out. Simple, on time, no worries.`,
       'feat.eyebrow':`What it does`,'feat.h2':`Everything you need, nothing you don't`,
       'feat.reminders.title':`Timely reminders`,'feat.reminders.p':`Notifications at the time you choose.`,
       'feat.calendar.title':`A clear calendar`,'feat.calendar.p':`All your collections at a glance, by day and by week.`,
@@ -343,22 +351,22 @@
       'feat.noaccount.title':`No account`,'feat.noaccount.p':`No sign-up, no email. Just open and go.`,
       'feat.languages.title':`In 5 languages`,'feat.languages.p':`Italian, English, French, German, Spanish.`,
       'feat.gentle.title':`Simple and kind`,'feat.gentle.p':`A recycling buddy, never preachy.`,
-      'plans.eyebrow':`Free & Premium`,'plans.h2':`Free does it all. Premium does more.`,
+      'plans.eyebrow':`Free & Premium`,'plans.h2':`Free already does it all. Premium does more.`,
       'plan.free.tag':`FREE`,'plan.free.title':`All the essentials`,'plan.free.li1':`Customisable categories and collection days`,'plan.free.li2':`Calendar with day and week views`,'plan.free.li3':`Reminders at the time you choose`,'plan.free.li4':`Offline and no account · 5 languages`,
-      'plan.pro.tag':`★ PREMIUM`,'plan.pro.title':`Even more yours`,'plan.pro.li1':`Manage several places (home, seaside, office…)`,'plan.pro.li2':`A dedicated icon for each place`,'plan.pro.li3':`Support an independent project 🌱`,
+      'plan.pro.tag':`★ PREMIUM`,'plan.pro.title':`Made even more yours`,'plan.pro.li1':`Manage several places (home, holiday place, office…)`,'plan.pro.li2':`A dedicated icon for each place`,'plan.pro.li3':`Support an independent project 🌱`,
       'cta.h2':`Get it on your phone 🌱`,'cta.p':`Trashino is on Google Play. Follow us to stay in the loop.`,
       'footer.tagline':`your recycling buddy`,'footer.privacy':`Privacy`,'footer.poweredby':`Powered by` },
     it:{ 'meta.title':`Ti ricordo io cosa buttare, e quando`, 'meta.description':`Trashino è il promemoria della raccolta differenziata: imposti i giorni di casa tua e l'ora, e ti ricorda cosa buttare. Offline, senza account, in 5 lingue.`,
       'nav.cosa':`Cos'è`,'nav.come':`Come funziona`,'nav.piani':`Gratis & Premium`,'hero.badge':`Disponibile su Google Play`,
       'hero.h1':`Ti ricordo io <span class="u">cosa</span> buttare.<br>E <span class="u">quando</span>.`,
-      'hero.lead':`Imposta i giorni di raccolta di casa tua e l'ora del promemoria. Al resto ci penso io — ogni giorno ti dico cosa portare fuori. <b>Offline, senza account, in 5 lingue.</b>`,
+      'hero.lead':`Imposta i giorni di raccolta di casa tua e l'ora del promemoria. Al resto ci penso io: ti dico cosa portare fuori, all'ora giusta. <b>Offline, senza account, in 5 lingue.</b>`,
       'cta.download':`▸ Scarica su Google Play`,'hero.note':`Nessuna registrazione. Semplice e leggera.`,'hero.appAlt':`La schermata iniziale di Trashino`,
       'quote.h2':`«Oggi cosa butto?»<br><span class="cav">— te lo ricordo io.</span>`,
       'quote.p':`Trashino è il tuo <b>amico</b> che ti ricorda <b>cosa portare fuori oggi</b>, in base al tuo calendario di raccolta.`,
       'come.eyebrow':`Come funziona`,'come.h2':`Impostami una volta, poi ci penso io`,'come.p':`Tre semplici passi e non dimentichi più un ritiro.`,
       'step1.title':`Imposta i giorni`,'step1.p':`Segna i giorni di raccolta di casa tua: organico, plastica, carta, vetro…`,
       'step2.title':`Scegli l'ora`,'step2.p':`Decidi tu a che ora ricevere il promemoria di cosa buttare oggi.`,
-      'step3.title':`Ti ricordo cosa buttare`,'step3.p':`Ogni giorno ti avviso cosa portare fuori. Semplice, puntuale, senza pensieri.`,
+      'step3.title':`Ti ricordo cosa buttare`,'step3.p':`Nei giorni di raccolta ti avviso cosa portare fuori. Semplice, puntuale, senza pensieri.`,
       'feat.eyebrow':`Cosa fa`,'feat.h2':`Tutto quello che ti serve, niente di più`,
       'feat.reminders.title':`Promemoria puntuali`,'feat.reminders.p':`Notifiche all'ora che scegli tu.`,
       'feat.calendar.title':`Calendario chiaro`,'feat.calendar.p':`Tutta la tua raccolta a colpo d'occhio, giorno e settimana.`,
@@ -374,21 +382,21 @@
     fr:{ 'meta.title':`Je te rappelle quoi sortir, et quand`, 'meta.description':`Trashino, c'est ton rappel de tri : tu règles les jours de collecte de chez toi et l'heure, et il te dit quoi sortir. Hors ligne, sans compte, en 5 langues.`,
       'nav.cosa':`C'est quoi`,'nav.come':`Comment ça marche`,'nav.piani':`Gratuit & Premium`,'hero.badge':`Disponible sur Google Play`,
       'hero.h1':`Je te rappelle <span class="u">quoi</span> sortir.<br>Et <span class="u">quand</span>.`,
-      'hero.lead':`Règle les jours de collecte de chez toi et l'heure du rappel. Le reste, c'est mon boulot — chaque jour, je te dis quoi sortir. <b>Hors ligne, sans compte, en 5 langues.</b>`,
+      'hero.lead':`Règle les jours de collecte de chez toi et l'heure du rappel. Le reste, c'est mon boulot — je te dis quoi sortir, à la bonne heure. <b>Hors ligne, sans compte, en 5 langues.</b>`,
       'cta.download':`▸ Télécharger sur Google Play`,'hero.note':`Aucune inscription. Simple et légère.`,'hero.appAlt':`L'écran d'accueil de Trashino`,
       'quote.h2':`« Aujourd'hui, je sors quoi ? »<br><span class="cav">— je te le rappelle.</span>`,
-      'quote.p':`Trashino, c'est le <b>copain</b> qui te rappelle <b>quoi sortir aujourd'hui</b>, selon ton calendrier de collecte.`,
+      'quote.p':`Trashino, c'est l'<b>ami</b> qui te rappelle <b>quoi sortir aujourd'hui</b>, selon ton calendrier de collecte.`,
       'come.eyebrow':`Comment ça marche`,'come.h2':`Règle-moi une fois, ensuite je m'occupe de tout`,'come.p':`Trois étapes simples et tu ne rates plus jamais une collecte.`,
       'step1.title':`Règle tes jours`,'step1.p':`Note les jours de collecte de chez toi : biodéchets, plastique, papier, verre…`,
-      'step2.title':`Choisis l'heure`,'step2.p':`C'est toi qui décides à quelle heure recevoir le rappel de quoi sortir aujourd'hui.`,
-      'step3.title':`Je te rappelle quoi sortir`,'step3.p':`Chaque jour, je te préviens quoi sortir. Simple, ponctuel, sans prise de tête.`,
+      'step2.title':`Choisis l'heure`,'step2.p':`C'est toi qui décides à quelle heure je te rappelle quoi sortir aujourd'hui.`,
+      'step3.title':`Je te rappelle quoi sortir`,'step3.p':`Le jour de la collecte, je te dis quoi sortir. Simple, ponctuel, sans prise de tête.`,
       'feat.eyebrow':`Ce qu'il fait`,'feat.h2':`Tout ce qu'il te faut, rien de plus`,
       'feat.reminders.title':`Rappels ponctuels`,'feat.reminders.p':`Des notifications à l'heure que tu choisis.`,
       'feat.calendar.title':`Un calendrier clair`,'feat.calendar.p':`Toute ta collecte d'un coup d'œil, au jour et à la semaine.`,
       'feat.offline.title':`Fonctionne hors ligne`,'feat.offline.p':`Aucune connexion requise : toujours avec toi.`,
       'feat.noaccount.title':`Sans compte`,'feat.noaccount.p':`Pas d'inscription, pas d'e-mail. Tu ouvres et c'est parti.`,
       'feat.languages.title':`En 5 langues`,'feat.languages.p':`Italien, anglais, français, allemand, espagnol.`,
-      'feat.gentle.title':`Simple et gentil`,'feat.gentle.p':`Un copain du tri, jamais donneur de leçons.`,
+      'feat.gentle.title':`Simple et gentil`,'feat.gentle.p':`Un ami du tri, jamais donneur de leçons.`,
       'plans.eyebrow':`Gratuit & Premium`,'plans.h2':`Gratuit fait déjà tout. Premium fait plus.`,
       'plan.free.tag':`GRATUIT`,'plan.free.title':`Tout l'essentiel`,'plan.free.li1':`Catégories et jours de collecte personnalisables`,'plan.free.li2':`Calendrier avec vues jour et semaine`,'plan.free.li3':`Des rappels à l'heure que tu choisis`,'plan.free.li4':`Hors ligne et sans compte · 5 langues`,
       'plan.pro.tag':`★ PREMIUM`,'plan.pro.title':`Encore plus à toi`,'plan.pro.li1':`Gère plusieurs lieux (maison, mer, bureau…)`,'plan.pro.li2':`Une icône dédiée pour chaque lieu`,'plan.pro.li3':`Soutiens un projet indépendant 🌱`,
@@ -397,21 +405,21 @@
     de:{ 'meta.title':`Ich erinnere dich, was raus muss — und wann`, 'meta.description':`Trashino ist deine Mülltrennungs-Erinnerung: Stell die Abholtage bei dir zu Hause und die Uhrzeit ein, und die App sagt dir, was raus muss. Offline, ohne Konto, in 5 Sprachen.`,
       'nav.cosa':`Was ist das`,'nav.come':`So funktioniert's`,'nav.piani':`Gratis & Premium`,'hero.badge':`Verfügbar bei Google Play`,
       'hero.h1':`Ich merk mir, <span class="u">was</span> raus muss.<br>Und <span class="u">wann</span>.`,
-      'hero.lead':`Stell die Abholtage bei dir zu Hause und die Uhrzeit der Erinnerung ein. Um den Rest kümmere ich mich — jeden Tag sage ich dir, was raus muss. <b>Offline, ohne Konto, in 5 Sprachen.</b>`,
+      'hero.lead':`Stell die Abholtage bei dir zu Hause und die Uhrzeit der Erinnerung ein. Um den Rest kümmere ich mich — ich sage dir, was raus muss, pünktlich zur richtigen Zeit. <b>Offline, ohne Konto, in 5 Sprachen.</b>`,
       'cta.download':`▸ Bei Google Play laden`,'hero.note':`Keine Anmeldung. Einfach und leicht.`,'hero.appAlt':`Der Startbildschirm von Trashino`,
       'quote.h2':`„Was muss heute raus?“<br><span class="cav">— ich sag's dir.</span>`,
-      'quote.p':`Trashino ist der <b>Kumpel</b>, der dich erinnert, <b>was heute raus muss</b> — passend zu deinem Abholkalender.`,
+      'quote.p':`Trashino ist der <b>Freund</b>, der dich erinnert, <b>was heute raus muss</b> — passend zu deinem Abholkalender.`,
       'come.eyebrow':`So funktioniert's`,'come.h2':`Stell mich einmal ein, den Rest mach ich`,'come.p':`Drei einfache Schritte und du verpasst keine Abholung mehr.`,
       'step1.title':`Stell die Tage ein`,'step1.p':`Trag die Abholtage bei dir zu Hause ein: Bio, Plastik, Papier, Glas…`,
       'step2.title':`Wähl die Uhrzeit`,'step2.p':`Du entscheidest, wann du die Erinnerung bekommst, was heute raus muss.`,
-      'step3.title':`Ich erinnere dich, was raus muss`,'step3.p':`Jeden Tag sag ich dir, was raus muss. Einfach, pünktlich, sorgenfrei.`,
+      'step3.title':`Ich erinnere dich, was raus muss`,'step3.p':`An Abholtagen sage ich dir, was raus muss. Einfach, pünktlich, sorgenfrei.`,
       'feat.eyebrow':`Was es kann`,'feat.h2':`Alles, was du brauchst — mehr nicht`,
       'feat.reminders.title':`Pünktliche Erinnerungen`,'feat.reminders.p':`Benachrichtigungen zur Uhrzeit, die du wählst.`,
       'feat.calendar.title':`Klarer Kalender`,'feat.calendar.p':`Deine ganze Abholung auf einen Blick — Tag und Woche.`,
       'feat.offline.title':`Funktioniert offline`,'feat.offline.p':`Keine Verbindung nötig — immer dabei.`,
       'feat.noaccount.title':`Ohne Konto`,'feat.noaccount.p':`Keine Anmeldung, keine E-Mail. Öffnen und los.`,
       'feat.languages.title':`In 5 Sprachen`,'feat.languages.p':`Italienisch, Englisch, Französisch, Deutsch, Spanisch.`,
-      'feat.gentle.title':`Einfach und freundlich`,'feat.gentle.p':`Ein Kumpel fürs Mülltrennen, nie besserwisserisch.`,
+      'feat.gentle.title':`Einfach und freundlich`,'feat.gentle.p':`Ein Freund fürs Mülltrennen, nie besserwisserisch.`,
       'plans.eyebrow':`Gratis & Premium`,'plans.h2':`Gratis kann schon alles. Premium kann mehr.`,
       'plan.free.tag':`GRATIS`,'plan.free.title':`Alles Wichtige`,'plan.free.li1':`Anpassbare Kategorien und Abholtage`,'plan.free.li2':`Kalender mit Tages- und Wochenansicht`,'plan.free.li3':`Erinnerungen zur Uhrzeit, die du wählst`,'plan.free.li4':`Offline und ohne Konto · 5 Sprachen`,
       'plan.pro.tag':`★ PREMIUM`,'plan.pro.title':`Noch mehr deins`,'plan.pro.li1':`Verwalte mehrere Orte (Zuhause, Meer, Büro…)`,'plan.pro.li2':`Ein eigenes Symbol für jeden Ort`,'plan.pro.li3':`Unterstütze ein unabhängiges Projekt 🌱`,
@@ -420,14 +428,14 @@
     es:{ 'meta.title':`Yo te recuerdo qué sacar, y cuándo`, 'meta.description':`Trashino es tu recordatorio de reciclaje: configuras los días de recogida de tu casa y la hora, y te dice qué sacar. Sin conexión, sin cuenta, en 5 idiomas.`,
       'nav.cosa':`Qué es`,'nav.come':`Cómo funciona`,'nav.piani':`Gratis & Premium`,'hero.badge':`Disponible en Google Play`,
       'hero.h1':`Yo me acuerdo de <span class="u">qué</span> sacar.<br>Y <span class="u">cuándo</span>.`,
-      'hero.lead':`Configura los días de recogida de tu casa y la hora del aviso. Del resto me encargo yo — cada día te digo qué sacar. <b>Sin conexión, sin cuenta, en 5 idiomas.</b>`,
+      'hero.lead':`Configura los días de recogida de tu casa y la hora del aviso. Del resto me encargo yo: te digo qué sacar, a la hora justa. <b>Sin conexión, sin cuenta, en 5 idiomas.</b>`,
       'cta.download':`▸ Descárgala en Google Play`,'hero.note':`Sin registro. Simple y ligera.`,'hero.appAlt':`La pantalla de inicio de Trashino`,
       'quote.h2':`«¿Hoy qué saco?»<br><span class="cav">— yo te lo recuerdo.</span>`,
       'quote.p':`Trashino es el <b>amigo</b> que te recuerda <b>qué sacar hoy</b>, según tu calendario de recogida.`,
       'come.eyebrow':`Cómo funciona`,'come.h2':`Configúrame una vez y del resto me encargo yo`,'come.p':`Tres pasos sencillos y no vuelves a perderte una recogida.`,
       'step1.title':`Configura tus días`,'step1.p':`Marca los días de recogida de tu casa: orgánico, plástico, papel, vidrio…`,
       'step2.title':`Elige la hora`,'step2.p':`Tú decides a qué hora recibir el aviso de qué sacar hoy.`,
-      'step3.title':`Yo te recuerdo qué sacar`,'step3.p':`Cada día te aviso qué sacar. Simple, puntual, sin preocupaciones.`,
+      'step3.title':`Yo te recuerdo qué sacar`,'step3.p':`Los días de recogida te aviso qué sacar. Simple, puntual, sin preocupaciones.`,
       'feat.eyebrow':`Qué hace`,'feat.h2':`Todo lo que necesitas, nada más`,
       'feat.reminders.title':`Avisos puntuales`,'feat.reminders.p':`Notificaciones a la hora que elijas.`,
       'feat.calendar.title':`Calendario claro`,'feat.calendar.p':`Toda tu recogida de un vistazo, por día y por semana.`,
