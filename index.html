@@ -128,15 +128,15 @@
   .cta-band{background:var(--depth);color:#fff;text-align:center}
   .cta-band h2{font-size:clamp(28px,4.6vw,46px);font-weight:600;margin:0 0 10px}
   .cta-band p{color:#dff3e6;margin:0 0 26px;font-size:18px}
-  .cta-band .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .cta-band .cta-actions{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .cta-band .cta-socials{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 
   footer{background:#0f2c16;color:#cfe6d4;padding:44px 0}
   footer .wrap{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
   footer img{height:26px}
-  footer .foot-cta{margin-left:auto;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-  footer .foot-soc{display:flex;gap:10px;flex-wrap:wrap}
-  footer .btn{padding:11px 18px;font-size:14px}
-  @media(max-width:640px){footer .foot-cta{margin-left:0;width:100%;align-items:stretch}}
+  footer .soc{margin-left:auto;display:flex;gap:12px}
+  footer .soc a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#cfe6d4;font-family:'Fredoka';font-weight:700;font-size:20px}
+  footer .soc a:hover{background:rgba(255,255,255,.16)}
   footer .fine{width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:16px;font-size:13px;color:#9fc0a8}
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
@@ -271,10 +271,12 @@
   <div class="wrap reveal">
     <h2>Scaricala sul tuo telefono 🌱</h2>
     <p>Trashino è su Google Play. Seguici per restare aggiornato.</p>
-    <div class="row">
+    <div class="cta-actions">
       <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener">▸ Scarica su Google Play</a>
-      <a class="btn btn-light" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
-      <a class="btn btn-ghost" href="https://facebook.com/trashino.eco" target="_blank" rel="noopener">Facebook</a>
+      <div class="cta-socials">
+        <a class="btn btn-light" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-ghost" href="https://facebook.com/trashino.eco" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
   </div>
 </section>
@@ -282,12 +284,9 @@
 <footer>
   <div class="wrap">
     <img src="trashino-wordmark-dark.png" alt="Trashino">
-    <div class="foot-cta">
-      <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener">▸ Scarica su Google Play</a>
-      <div class="foot-soc">
-        <a class="btn btn-ghost" href="https://instagram.com/trashino.eco" target="_blank" rel="noopener">Instagram</a>
-        <a class="btn btn-ghost" href="https://facebook.com/trashino.eco" target="_blank" rel="noopener">Facebook</a>
-      </div>
+    <div class="soc">
+      <a href="https://instagram.com/trashino.eco" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#cfe6d4" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="#cfe6d4" stroke="none"/></svg></a>
+      <a href="https://facebook.com/trashino.eco" target="_blank" rel="noopener" aria-label="Facebook">f</a>
     </div>
     <div class="fine">© 2026 Trashino · l'amico della raccolta differenziata · <a href="https://airally-digital.github.io/trashino-privacy/" target="_blank" rel="noopener" style="color:#bfe0c6;text-decoration:underline">Privacy</a><br>Powered by <b style="color:#e7f6ec">Airally Digital</b> <span style="opacity:.55">· v1.0</span></div>
   </div>
