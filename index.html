@@ -72,8 +72,8 @@
   @media(max-width:860px){.mascot{width:120px;right:calc(50% - 190px)}}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
   /* foglia che scende in LOOP fino a fine pagina (fade in/out per un reset morbido) */
-  .fall-leaf{position:absolute;left:0;top:-6%;font-size:30px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.25));animation:pagefall 34s linear infinite;will-change:transform,top}
-  @keyframes pagefall{0%{top:-6%;opacity:0;transform:translateX(8vw) rotate(0)}6%{opacity:.85}25%{transform:translateX(42vw) rotate(150deg)}50%{transform:translateX(14vw) rotate(250deg)}75%{transform:translateX(54vw) rotate(360deg)}94%{opacity:.85}100%{top:104%;opacity:0;transform:translateX(26vw) rotate(500deg)}}
+  .fall-leaf{position:absolute;left:0;top:0;font-size:30px;z-index:6;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(10,40,16,.25));animation:pagefall 34s linear infinite;will-change:transform,top}
+  @keyframes pagefall{0%{top:0;opacity:0;transform:translateX(8vw) rotate(0)}6%{opacity:.8}25%{transform:translateX(42vw) rotate(150deg)}50%{transform:translateX(14vw) rotate(250deg)}75%{transform:translateX(52vw) rotate(360deg)}92%{opacity:.8}100%{top:92%;opacity:0;transform:translateX(26vw) rotate(500deg)}}
   @media(prefers-reduced-motion:reduce){.fall-leaf{display:none}}
 
   /* SECTIONS */
