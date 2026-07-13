@@ -68,8 +68,8 @@
   .mascot{position:absolute;right:-6px;bottom:-8px;width:150px;z-index:3;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 12px 18px rgba(6,26,12,.4))}
   @media(max-width:860px){.mascot{width:120px;right:calc(50% - 190px)}}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
-  .leaf{position:absolute;color:var(--leaf2);opacity:.8;animation:drift linear infinite}
-  @keyframes drift{0%{transform:translateY(-10px) rotate(0)}100%{transform:translateY(30px) rotate(20deg)}}
+  .leaf{position:absolute;color:var(--leaf2);opacity:0;animation:drift linear infinite;will-change:transform,opacity}
+  @keyframes drift{0%{transform:translateY(-40px) rotate(-8deg);opacity:0}12%{opacity:.8}88%{opacity:.8}100%{transform:translateY(150px) rotate(46deg);opacity:0}}
 
   /* SECTIONS */
   section{padding:84px 0}
@@ -153,9 +153,9 @@
 <!-- HERO -->
 <header class="hero">
   <div class="glow g1"></div><div class="glow g2"></div>
-  <span class="leaf" style="left:8%;top:24%;font-size:26px;animation-duration:6s">🍃</span>
-  <span class="leaf" style="left:46%;top:12%;font-size:18px;animation-duration:8s">🍃</span>
-  <span class="leaf" style="right:34%;bottom:16%;font-size:22px;animation-duration:7s">🍃</span>
+  <span class="leaf" style="left:9%;top:14%;font-size:26px;animation-duration:12s;animation-delay:0s">🍃</span>
+  <span class="leaf" style="left:47%;top:8%;font-size:18px;animation-duration:15s;animation-delay:-5s">🍃</span>
+  <span class="leaf" style="right:30%;top:20%;font-size:22px;animation-duration:13s;animation-delay:-9s">🍃</span>
   <div class="wrap">
     <div>
       <span class="badge"><span class="dot"></span> Gratis su Google Play</span>
@@ -210,7 +210,7 @@
     <div class="sec-head reveal"><span class="eyebrow">Come funziona</span><h2>Lo imposti una volta, poi ci penso io</h2><p>Tre passi e non ci pensi più.</p></div>
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h3>Imposti i giorni</h3><p>Segni i giorni di raccolta di casa tua: organico, plastica, carta, vetro…</p></div>
-      <div class="step reveal" style="transition-delay:.08s"><div class="n">2</div><h3>Scegli l'ora</h3><p>Decidi tu a che ora ricevere il promemoria. La sera prima? La mattina? Come vuoi.</p></div>
+      <div class="step reveal" style="transition-delay:.08s"><div class="n">2</div><h3>Scegli l'ora</h3><p>Decidi tu a che ora ricevere il promemoria di cosa buttare oggi.</p></div>
       <div class="step reveal" style="transition-delay:.16s"><div class="n">3</div><h3>Ti ricordo cosa buttare</h3><p>Ogni giorno ti avviso cosa portare fuori. Semplice, puntuale, senza pensieri.</p></div>
     </div>
   </div>
