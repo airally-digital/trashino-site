@@ -69,15 +69,15 @@
   .lang-trigger{display:none;align-items:center;gap:4px;background:#fff;border:1.5px solid var(--line);border-radius:999px;
     padding:8px 12px;font-size:17px;line-height:1;cursor:pointer;color:var(--green)}
   .lang-menu{display:flex;gap:2px}
-  .lang-btn{background:none;border:none;cursor:pointer;font-size:20px;line-height:1;padding:9px 11px;border-radius:9px;opacity:.45;filter:grayscale(.5);transition:.15s}
-  .lang-btn:hover{opacity:1;filter:none}
-  .lang-btn.on{opacity:1;filter:none;background:rgba(27,94,32,.10)}
+  .lang-btn{background:none;border:none;cursor:pointer;font-family:'Fredoka','Nunito',sans-serif;font-weight:600;font-size:14px;letter-spacing:.02em;line-height:1;padding:8px 9px;border-radius:9px;color:var(--muted);opacity:.9;transition:.15s}
+  .lang-btn:hover{opacity:1;color:var(--green2)}
+  .lang-btn.on{opacity:1;color:var(--green);background:rgba(27,94,32,.10)}
   @media(max-width:600px){
     .lang-trigger{display:inline-flex}
     .langsel .lang-menu{position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;background:#fff;
       border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(20,64,26,.16);padding:6px;display:none;z-index:60}
     .langsel.open .lang-menu{display:flex}
-    .lang-btn{font-size:22px}
+    .lang-btn{font-size:15px}
   }
 
   /* HERO */
@@ -182,13 +182,13 @@
       <a class="btn btn-green nav-cta" href="https://play.google.com/store/apps/details?id=com.trashino.app" target="_blank" rel="noopener" style="padding:9px 16px;font-size:14px">Google Play</a>
     </div>
     <div class="langsel" id="langsel">
-      <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">🇬🇧 ▾</button>
+      <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">EN ▾</button>
       <div class="lang-menu" role="group" aria-label="Language">
-        <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧</button>
-        <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch">🇩🇪</button>
-        <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
       </div>
     </div>
   </div>
@@ -331,7 +331,7 @@
   nlinks.forEach(a=>{const s=document.getElementById(a.getAttribute('href').slice(1)); if(s)spy.observe(s);});
 
   // ---- i18n (inglese di default) ----
-  const FLAG={en:'🇬🇧',it:'🇮🇹',fr:'🇫🇷',de:'🇩🇪',es:'🇪🇸'};
+  const FLAG={en:'EN',it:'IT',fr:'FR',de:'DE',es:'ES'};
   const T={
     en:{ 'meta.title':`I'll remind you what to put out, and when`, 'meta.description':`Trashino is your recycling reminder: set your local collection days and a time, and it tells you what to put out. Offline, no account, in 5 languages.`,
       'nav.cosa':`What it is`,'nav.come':`How it works`,'nav.piani':`Free & Premium`,'hero.badge':`Available on Google Play`,
